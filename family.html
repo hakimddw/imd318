@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Family</title>
+    <style>
+        nav {
+            border: 2px solid white; 
+        }
+        .title {
+            text-align: center;
+            font-size: 5em; 
+            margin: 20px 0;
+            color: gold; 
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8); 
+        }
+        .picture-box {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
+        }
+        .picture-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); 
+        }
+        .description {
+            text-align: center;
+            font-size: 1.5em; 
+            margin: 10px 0;
+            border-top: 1px solid black;
+            padding-top: 10px;
+            color: gold; /* Gold color for descriptions */
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); 
+        }
+        .datetime {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AboutMe</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="family.html" class="active">Family</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+    <section class="content">
+        <h1 class="title">MY FAMILY</h1>
+        <div class="picture-box" onclick="">
+            <img src="family1.jpg" alt="Family Member 1" style="width:100%; height:100%;">
+        </div>
+        <div class="description">This is my family, I have my father, mother and a sister, I really love them very much. My family are really supportive towards me.</div>
+        
+        <div class="picture-box" onclick="">
+            <img src="family2.jpg" alt="Family Member 2" style="width:100%; height:100%;">
+        </div>
+        <div class="description">This my friends from Komander Kesatria but we are divided into Company and this my Company "APM". I always love them just like my family.</div>
+        
+        <div class="picture-box" onclick="">
+            <img src="family3.jpg" alt="Family Member 3" style="width:100%; height:100%;">
+        </div>
+        <div class="description">This is also my family, Family of "37". We are a 37 batch in Komander Kesatria. All of them are really fun and have a different unique personality. </div>
+    </section>
+    <div class="datetime" id="datetime"></div>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            document.getElementById('datetime').innerHTML = now.toLocaleString('en-US', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>

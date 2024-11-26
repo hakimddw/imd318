@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Experience</title>
+    <style>
+        nav {
+            border: 2px solid white;
+        }
+        .experience-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5rem 9%;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .video-box, .description, .picture-box {
+            border: 2px solid green;
+            padding: 2rem;
+            margin: 1rem;
+            flex: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-box, .picture-box {
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+        .video-box:hover, .picture-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+        }
+        .video-box {
+            position: relative;
+            height: 300px;
+        }
+        .video-box::after {
+            content: "▶";
+            font-size: 5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .description {
+            font-size: 2rem;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+        }
+        .picture-box {
+            height: 200px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            width: 100%;
+        }
+        .gallery .small-picture {
+            width: 18%;
+            height: 150px;
+            border: 2px solid green;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery .small-picture:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+        }
+        .experience-title {
+            margin-top: 2rem; /* Added space above the experience title */
+            color: #fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AboutMe</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="family.html">Family</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+    <section class="experience-container">
+        <h1 class="experience-title" style="font-size: 4rem;">MY EXPERIENCE</h1>
+        <div class="main-content">
+            <div class="video-box">
+                <video width="100%" height="100%" controls>
+                    <source src="videokom.mov" type="video/mp4">
+                </video>
+            </div>
+            <div class="description">
+                <p>Overall, I get all incredible experience since I come to UiTM Segamat.</p>
+<ul>
+    <li>Komander Kesatria: I joined Komander Kesatria because I wanted to feel different than any other student. I gained so many experiences and also met some really unique friends.</li>
+    <br>
+    <li>Running Crew: I joined the Running Crew to challenge myself physically and mentally. It taught me the importance of teamwork, perseverance, and time management. Along the way, I also formed great bonds with my team members and learned to enjoy the journey as much as the finish line.</li>
+    <br>
+    <li>Sports Club: Being part of the Sports Club allowed me to stay active and explore different types of sports. I gained leadership skills by organizing events, developed discipline through regular practice, and discovered the value of sportsmanship in both victories and losses.</li>
+</ul>
+
+                </ul>
+            </div>
+        </div>
+                
+        <div class="gallery">
+            <div class="small-picture">
+                <img src="exp1.jpg" alt="Exp Picture 1" style="width: 100%; height: 100%;">
+            </div>
+            <div class="small-picture">
+                <img src="exp2.jpg" alt="Exp Picture 2" style="width: 100%; height: 100%;">
+            </div>
+            <div class="small-picture">
+                <img src="exp3.jpg" alt="Exp Picture 3" style="width: 100%; height: 100%;">
+            </div>
+            <div class="small-picture">
+                <img src="exp4.jpg" alt="Exp Picture 4" style="width: 100%; height: 100%;">
+            </div>
+            <div class="small-picture">
+                <img src="exp5.jpg" alt="Exp Picture 5" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Education</title>
+    <style>
+        nav {
+            border: 2px solid white; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 2px solid #4CAF50;
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            font-size: 24px;
+            background-color: #f2f2f2;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .image-box {
+            width: 30%;
+            height: 200px;
+            border: 2px solid #4CAF50;
+            background-color: #e7f3fe;
+            transition: transform 0.3s, box-shadow 0.3s; 
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6); 
+        }
+        .image-box:hover {
+            transform: scale(1.05); 
+        }
+        h1 {
+            font-size: 36px;
+            margin-top: 40px; 
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); 
+        }
+        .black-text {
+            color: black;
+        }
+        .large-font {
+            font-size: 32px; 
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); 
+        }
+        .datetime {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">AboutMe</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="family.html">Family</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+    <section class="content">
+        <h1>MY EDUCATION LEVEL</h1>
+        <p>This is the current education i recently achieved.</p>
+        <div class="image-container">
+            <div class="image-box">
+                <img src="sek1.png" alt="sek 1" style="width:100%; height:100%; object-fit:contain;">
+            </div>
+            <div class="image-box">
+                <img src="sek2.jpeg" alt="sek 2" style="width:100%; height:100%; object-fit:contain;">
+            </div>
+            <div class="image-box">
+                <img src="sek3.png" alt="sek 3" style="width:100%; height:100%; object-fit:contain;">
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th class="black-text large-font">Qualification</th>
+                <th class="black-text large-font">Grade</th>
+            </tr>
+            <tr>
+                <td class="large-font">UPSR</td>
+                <td class="large-font">4A</td>
+            </tr>
+            <tr>
+                <td class="large-font">PT3</td>
+                <td class="large-font">2A</td>
+            </tr>
+            <tr>
+                <td class="large-font">SMA</td>
+                <td class="large-font">MAQBUL</td>
+            </tr>
+            <tr>
+                <td class="large-font">SPM</td>
+                <td class="large-font">5A</td>
+            </tr>
+            <tr>
+                <td class="large-font">DIPLOMA</td>
+                <td class="large-font">IN PROGRESS</td>
+            </tr>
+        </table>
+    </section>
+    <div class="datetime" id="datetime"></div>
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+            document.getElementById('datetime').innerHTML = now.toLocaleString('en-US', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>
